@@ -1,0 +1,19 @@
+modules {
+  module {
+    name = "totalaccess"
+    language = "python"
+    param url {
+        value = "http://server.example.com/server-status"
+    }
+  }
+}
+
+collection_group {
+  collect_every = 30
+  time_threshold = 90
+  metric {
+    name = "total_access"
+    title = "Apache Total Accesses"
+    value_threshold = 0
+  }
+}
